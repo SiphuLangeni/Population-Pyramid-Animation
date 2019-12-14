@@ -231,4 +231,4 @@ animate(
 ```
   
     
-![Population Pyramid](/Volumes/DATASCIENCE/Population-Pyramid-Animation/Figs/PopPyramid.gif)
+<center> ![](/Volumes/DATASCIENCE/Population-Pyramid-Animation/Figs/PopPyramid.gif) </center>
