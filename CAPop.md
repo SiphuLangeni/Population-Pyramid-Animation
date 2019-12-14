@@ -77,7 +77,7 @@ There are 2006 records and 5 attributes. Lets take a look at the first 6 records
 
 ```r
 kable(head(CAPop)) %>%
-  kable_styling(bootstrap_options = 'striped', font_size = 12, full_width = F)
+  kable_styling(bootstrap_options = 'striped', font_size = 12, full_width = FALSE, position = 'center')
 ```
 
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
