@@ -231,5 +231,5 @@ animate(
 ```
   
     
-![](https://github.com/SiphuLangeni/Population-Pyramid-Animation/blob/master/Figs/PopPyramid.gif)
+<center>![](https://github.com/SiphuLangeni/Population-Pyramid-Animation/blob/master/Figs/PopPyramid.gif)</center>
 
