@@ -11,7 +11,9 @@ output:
 
 * Procure, clean, analyze the publically available dataset
 * Create a visualization to display the data graphically
-* Animate the plot to show changes over time
+* Animate the plot to show changes over time  
+
+Population data for Canada was retrived from the [World Bank website](https://databank.worldbank.org). The years ranged from 1960 to 2018. The dataframe was originally in the wide format and consisted of 34 records representing each age group and gender.  
 
 
 ##### Install packages/load libraries
@@ -77,7 +79,7 @@ There are 2006 records and 5 attributes. Lets take a look at the first 6 records
 
 ```r
 kable(head(CAPop)) %>%
-  kable_styling(bootstrap_options = 'striped', font_size = 12, full_width = FALSE, position = 'center')
+  kable_styling(bootstrap_options = 'striped', font_size = 12, full_width = FALSE)
 ```
 
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -149,19 +151,13 @@ PopPyramid <- CAPop %>%
         ) +
   geom_bar(stat = 'identity') +
   scale_fill_manual(values = c('#4682b4', '#ee7989')) + 
+   coord_flip() + 
   facet_share(
               ~ Gender,
               dir = 'h',
               scales = 'free',
               reverse_num = TRUE
               ) +
-  labs(
-       title = 'Canada Population Estimate 1960 - 2018\n\n{closest_state}',
-       subtitle = '\n\nAge Group',
-       y = '\n\nPopulation (in thousands)',
-       caption  = '\n\nData Source: https://databank.worldbank.org'
-       ) + 
-  coord_flip() +
   theme(
     plot.background = element_blank(),
     axis.ticks = element_blank(),
@@ -200,7 +196,13 @@ PopPyramid <- CAPop %>%
                                 face = 'italic',
                                 color = 'gray'
                                 )
-  )
+    ) + 
+     labs(
+       title = 'Canada Population Estimate 1960 - 2018\n\n{closest_state}',
+       subtitle = '\n\nAge Group',
+       y = '\n\nPopulation (in thousands)',
+       caption  = '\n\nData Source: https://databank.worldbank.org'
+       )
 ```
 
 ##### Animation Parameters
@@ -223,7 +225,7 @@ PopPyramid +
 animate(
         PopPyramid,
         fps = 24,
-        duration = 45,
+        duration = 30,
         width = 500,
         height = 500,
         renderer = gifski_renderer('PopPyramid.gif')
