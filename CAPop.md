@@ -231,4 +231,4 @@ animate(
 ```
   
     
-![](https://github.com/SiphuLangeni/Population-Pyramid-Animation/blob/master/Figs/PopPyramid.gif)
+![](/Volumes/DATASCIENCE/Population-Pyramid-Animation/Figs/PopPyramid.gif)
