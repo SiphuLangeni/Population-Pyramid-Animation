@@ -230,6 +230,7 @@ animate(
         )
 ```
   
-    
-<center>![](https://github.com/SiphuLangeni/Population-Pyramid-Animation/blob/master/Figs/PopPyramid.gif)</center>
-
+  
+<p align = 'center'>
+<img src = 'https://github.com/SiphuLangeni/Population-Pyramid-Animation/blob/master/Figs/PopPyramid.gif' />
+</p>
