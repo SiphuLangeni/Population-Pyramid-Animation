@@ -8,11 +8,11 @@ output:
 
 
 ## Objectives 
-<p style = 'font-size:12pt'>
-* Procure, analyze and clean the publically available dataset
-* Create a visualization that can display the data graphically
+
+* Procure, clean, analyze the publically available dataset
+* Create a visualization to display the data graphically
 * Animate the plot to show changes over time
-</p>
+
 
 ##### Install packages/load libraries
 
@@ -20,14 +20,13 @@ output:
 if(!require('pacman')) install.packages('pacman')
 pacman::p_load(tidyverse, ggpol, gganimate, gifski, kableExtra)
 ```
-<p style = 'font-size:12pt'>
-**pacman**: Load all the packages at once  
-**tidyverse:** Prepare the dataframe (tidyr), manipulate the dataframe with ease (dplyr, stringr), produce plots (ggplot2)  
-**ggpol:** Additional features for ggplot2  
-**gganimate:** Animation of graphics  
-**gifski:** To render files as a GIF  
-**kableExtra:** Create visually appealing tables  
-</p>
+
+* **pacman**: Load all the packages at once
+* **tidyverse:** Prepare the dataframe (tidyr), manipulate the dataframe with ease (dplyr, stringr), produce plots (ggplot2)
+* **ggpol:** Additional features for ggplot2
+* **gganimate:** Animation of graphics
+* **gifski:** To render files as a GIF
+* **kableExtra:** Create visually appealing tables
    
    
 
@@ -69,9 +68,9 @@ dim(CAPop)
 ```
 ## [1] 2006    4
 ```
-<p style = 'font-size:12pt'>
+
 There are 2006 records and 5 attributes. Lets take a look at the first 6 records to get a sense of what is in the data after manipulation.
-</p>
+
 
 
 
@@ -130,12 +129,11 @@ kable(head(CAPop)) %>%
 </tbody>
 </table>
 
-<p style = 'font-size:12pt'>
-We can create the **animation** in **3** distinct steps:  
-1. Create the static plot  
-2. Apply animation parameters  
+We can create the **animation** in **3** distinct steps:
+1. Create the static plot
+2. Apply animation parameters
 3. Render to file
-</p>
+
 
   
   
@@ -233,4 +231,4 @@ animate(
 ```
   
     
-<center>![](/Volumes/DATASCIENCE/Population-Pyramid-Animation/Figs/PopPyramid.gif)</center>
+![](https://github.com/SiphuLangeni/Population-Pyramid-Animation/blob/master/Figs/PopPyramid.gif)
