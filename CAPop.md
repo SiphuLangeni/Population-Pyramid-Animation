@@ -13,7 +13,7 @@ output:
 * Create a visualization to display the data graphically
 * Animate the plot to show changes over time  
 
-Population data for Canada was retrived from the [World Bank website](https://databank.worldbank.org). The years ranged from 1960 to 2018. The dataframe was originally in the wide format and consisted of 34 records representing each age group and gender.  
+Population data for Canada was retrieved from the [World Bank website](https://databank.worldbank.org). The years ranged from 1960 to 2018. The dataframe was originally in the wide format and consisted of 34 records representing each age group and gender.  
 
 
 ##### Install packages/load libraries
@@ -24,7 +24,7 @@ pacman::p_load(tidyverse, ggpol, gganimate, gifski, kableExtra)
 ```
 
 * **pacman**: Load all the packages at once
-* **tidyverse:** Prepare the dataframe (tidyr), manipulate the dataframe with ease (dplyr, stringr), produce plots (ggplot2)
+* **tidyverse:** Prepare the dataframe (*tidyr*), manipulate the dataframe with ease (*dplyr*, *stringr*), produce plots (*ggplot2*)
 * **ggpol:** Additional features for ggplot2
 * **gganimate:** Animation of graphics
 * **gifski:** To render files as a GIF
@@ -48,7 +48,7 @@ CAPop <- CAPop %>%
   mutate(Age = substr(Series.Name, 17, 21),
          # Change the value for last Age group
          Age = as.factor(case_when(Age == '80 an' ~ '80+', TRUE ~ Age)),
-         # Greate a column for Gender
+         # Create a column for Gender
          Gender = as.factor(ifelse(str_detect(Series.Name, 'female$') == TRUE, 'Female', 'Male')),
          # Reorder the factor levels (important for the order data is displayed)
          Gender = factor(Gender, levels = c('Male', 'Female'))) %>% 
@@ -169,7 +169,6 @@ PopPyramid <- CAPop %>%
     strip.text.x = element_blank(),
     panel.grid.minor = element_blank(),
     panel.grid.major = element_blank(),                                  
-    plot.tag = element_text(),
     axis.text = element_text(size = 14),
     legend.key.size = unit(0.75, 'cm'),
     legend.text = element_text(
