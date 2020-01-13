@@ -1,12 +1,3 @@
----
-title: "Population Pyramid Animation"
-output: 
-  html_document: 
-    keep_md: yes
----
-
-
-
 ## Objectives 
 
 * Procure, clean, analyze the publically available dataset
@@ -207,7 +198,7 @@ PopPyramid <- CAPop %>%
 ##### Animation Parameters
 
 ```r
-PopPyramid + 
+PopPyramid <- PopPyramid + 
   transition_states(
                     Year,
                     transition_length = 1,
