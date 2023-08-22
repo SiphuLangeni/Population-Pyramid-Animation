@@ -10,3 +10,5 @@ Population data was retrieved for Canada from the specified years. The data was 
 To follow along, the dataset may be found [here](github.com/SiphuLangeni/Population-Pyramid-Animation/blob/master/CAPop.csv).
 
 Use of data is covered under a Creative Commons Attribution 4.0 International License.
+
+![Animated Population Pyramid](https://raw.githubusercontent.com/SiphuLangeni/SiphuLangeni/master/Figs/PopPyramid.gif)
